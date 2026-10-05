@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>画图 · 本地画板</title><link rel="stylesheet" href="style.css"></head>
 <body>
+<div class="app-window">
 <header><div class="brand"><span class="logo">▧</span><div><strong>画图</strong><span class="subtitle">本地画板</span></div></div><span class="filename">未命名作品</span><div class="files"><button id="import">打开图片</button><button id="save" class="primary">保存 PNG</button></div></header>
 <main>
 <section class="toolbar" aria-label="绘图工具栏">
@@ -19,5 +20,6 @@
 <div class="workspace"><div class="canvas-heading"><span>画布</span><span>1200 × 760 px</span></div><div class="paper"><canvas id="canvas" width="1200" height="760" aria-label="绘图画布"></canvas></div><p class="hint">从一笔开始，让想法有形状。<span>画笔 B · 橡皮 E · 撤销 Ctrl + Z</span></p></div>
 </main>
 <footer><span><i></i> <span id="status" role="status">准备就绪</span></span><span id="position">1200 × 760 px</span><span>本地运行 · 图片不会上传</span></footer>
+</div>
 <input id="file" type="file" accept="image/*" hidden><script src="app.js"></script>
 </body></html>
