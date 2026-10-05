@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>画图 · 本地画板</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="brand"><span class="logo">▧</span><div><strong>画图</strong><span class="subtitle">本地画板</span></div></div><span class="filename">未命名作品</span><div class="files"><button id="import">打开图片</button><button id="save" class="primary">保存 PNG</button></div></header>
+<main>
+<section class="toolbar" aria-label="绘图工具栏">
+<div class="group"><div class="tools">
+<button data-tool="brush" class="tool selected" title="画笔 (B)" aria-pressed="true"><span>✎</span>画笔</button>
+<button data-tool="eraser" class="tool" title="橡皮 (E)" aria-pressed="false"><span>▱</span>橡皮</button>
+<button data-tool="line" class="tool" title="直线 (L)" aria-pressed="false"><span>╱</span>直线</button>
+<button data-tool="rectangle" class="tool" title="矩形 (R)" aria-pressed="false"><span>□</span>矩形</button>
+<button data-tool="ellipse" class="tool" title="椭圆 (O)" aria-pressed="false"><span>○</span>椭圆</button>
+</div><span class="label">工具</span></div>
+<div class="group sizes"><label for="size">粗细 <output id="size-value">6 px</output></label><input id="size" type="range" min="1" max="50" value="6"><label class="fill"><input id="fill" type="checkbox">填充形状</label></div>
+<div class="group colors"><div class="color-row"><input id="color" type="color" value="#2563eb" aria-label="自定义颜色"><div id="palette" aria-label="预设颜色"></div></div><span class="label">颜色 · 点击色块选择</span></div>
+<div class="group actions"><div><button id="undo" title="撤销 Ctrl+Z" disabled>↶ 撤销</button><button id="redo" title="重做 Ctrl+Y" disabled>↷ 重做</button></div><button id="clear" class="clear">清空画布</button></div>
+</section>
+<div class="workspace"><div class="canvas-heading"><span>画布</span><span>1200 × 760 px</span></div><div class="paper"><canvas id="canvas" width="1200" height="760" aria-label="绘图画布"></canvas></div><p class="hint">从一笔开始，让想法有形状。<span>画笔 B · 橡皮 E · 撤销 Ctrl + Z</span></p></div>
+</main>
+<footer><span><i></i> <span id="status" role="status">准备就绪</span></span><span id="position">1200 × 760 px</span><span>本地运行 · 图片不会上传</span></footer>
+<input id="file" type="file" accept="image/*" hidden><script src="app.js"></script>
+</body></html>
